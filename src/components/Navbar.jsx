@@ -13,7 +13,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             href="#home" 
             className="font-mono text-xl font-bold text-white hover:scale-105 transition-transform duration-300 shimmer"
           >
-            Khalid<span className="gradient-blue">.</span><span className="text-cyan-400">Gara</span>
+            Khalid<span className="gradient-blue">.</span><span className="text-cyan-400">EL Mati</span>
           </a>
 
           <div

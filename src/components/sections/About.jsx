@@ -22,33 +22,39 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20 relative bg-pattern"
+      className="min-h-screen flex items-center justify-center py-20 relative"
+      style={{ backgroundColor: '#ECFDF5' }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-blue-500/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-green-800/5"></div>
       
       <RevealOnScroll>
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 gradient-blue text-center neon-blue">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{ color: '#064E3B' }}>
             About Me
           </h2>
 
-          <div className="glass rounded-2xl p-8 border border-white/10 card-hover mb-8">
-            <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-              I'm <span className="text-blue-400 font-bold gradient-blue">Khalid EL Mati</span>, a passionate Full Stack Web
+          <div className="rounded-2xl p-8 border border-emerald-200 mb-8 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
+            <p className="mb-6 text-lg leading-relaxed" style={{ color: '#064E3B' }}>
+              I'm <span className="font-bold" style={{ color: '#10B981' }}>Khalid EL Mati</span>, a passionate Full Stack Web
               Developer from Morocco, with a strong interest in building modern,
               responsive, and user-friendly web applications. I enjoy combining
               creativity and technology to deliver efficient digital solutions.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="glass-dark rounded-xl p-6 card-hover group border border-blue-500/20">
-                <h3 className="text-xl font-bold mb-4 gradient-text">🎨 Frontend</h3>
+              <div className="rounded-xl p-6 group border border-emerald-300 bg-emerald-50/70 hover:bg-emerald-50 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-bold mb-4" style={{ color: '#064E3B' }}>🎨 Frontend</h3>
                 <div className="flex flex-wrap gap-3">
                   {frontendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-400 py-2 px-4 rounded-full text-sm font-medium hover:bg-blue-500/20 hover:scale-105 hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)] transition-all duration-300 animate-fade-in-scale"
-                      style={{ animationDelay: `${key * 0.1}s` }}
+                      className="py-2 px-4 rounded-full text-sm font-medium hover:scale-105 transition-all duration-300 animate-fade-in-scale"
+                      style={{ 
+                        backgroundColor: '#10B981', 
+                        color: 'white',
+                        animationDelay: `${key * 0.1}s`,
+                        boxShadow: '0 2px 8px rgba(16, 185, 129, 0.3)'
+                      }}
                     >
                       {tech}
                     </span>
@@ -56,14 +62,19 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className="glass-dark rounded-xl p-6 card-hover group border border-cyan-500/20">
-                <h3 className="text-xl font-bold mb-4 gradient-text">⚙️ Backend</h3>
+              <div className="rounded-xl p-6 group border border-amber-300 bg-amber-50/70 hover:bg-amber-50 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-bold mb-4" style={{ color: '#064E3B' }}>⚙️ Backend</h3>
                 <div className="flex flex-wrap gap-3">
                   {backendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-cyan-500/10 text-cyan-400 py-2 px-4 rounded-full text-sm font-medium hover:bg-cyan-500/20 hover:scale-105 hover:shadow-[0_2px_8px_rgba(6,182,212,0.3)] transition-all duration-300 animate-fade-in-scale"
-                      style={{ animationDelay: `${key * 0.1}s` }}
+                      className="py-2 px-4 rounded-full text-sm font-medium hover:scale-105 transition-all duration-300 animate-fade-in-scale"
+                      style={{ 
+                        backgroundColor: '#F59E0B', 
+                        color: 'white',
+                        animationDelay: `${key * 0.1}s`,
+                        boxShadow: '0 2px 8px rgba(245, 158, 11, 0.3)'
+                      }}
                     >
                       {tech}
                     </span>
@@ -75,40 +86,40 @@ export const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* 🎓 Education */}
-            <div className="glass p-6 rounded-2xl border border-white/10 card-hover group">
-              <div className="gradient-border p-4 rounded-xl mb-4">
-                <h3 className="text-xl font-bold mb-2 gradient-text">🏫 Education</h3>
+            <div className="p-6 rounded-2xl border border-emerald-200 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="p-4 rounded-xl mb-4 border-2 border-emerald-400 bg-emerald-50">
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#064E3B' }}>🏫 Education</h3>
               </div>
-              <ul className="space-y-4 text-gray-300">
-                <li className="group-hover:text-gray-200 transition-colors">
-                  <strong className="text-blue-400">
+              <ul className="space-y-4" style={{ color: '#064E3B' }}>
+                <li className="group-hover:opacity-80 transition-opacity">
+                  <strong style={{ color: '#10B981' }}>
                     Bachelor's Degree in Web Engineering (Full Stack)
                   </strong>{" "}
-                  <span className="text-sm text-gray-400">– École Supérieure de Technologie de Kénitra (2025)</span>
+                  <span className="text-sm" style={{ color: '#064E3B', opacity: 0.7 }}>– École Supérieure de Technologie de Kénitra (2025)</span>
                 </li>
-                <li className="group-hover:text-gray-200 transition-colors">
-                  <strong className="text-cyan-400">YouCode</strong>{" "}
-                  <span className="text-sm text-gray-400">(OCP, Simplon & UM6P Partnership) –
+                <li className="group-hover:opacity-80 transition-opacity">
+                  <strong style={{ color: '#F59E0B' }}>YouCode</strong>{" "}
+                  <span className="text-sm" style={{ color: '#064E3B', opacity: 0.7 }}>(OCP, Simplon & UM6P Partnership) –
                   Project-based learning in Agile, responsive web design, and
                   teamwork. Youssofia (2023)</span>
                 </li>
-                <li className="group-hover:text-gray-200 transition-colors">
-                  <strong className="text-purple-400">
+                <li className="group-hover:opacity-80 transition-opacity">
+                  <strong style={{ color: '#064E3B', opacity: 0.8 }}>
                     Diploma: Specialized Technician in Software Development
                   </strong>{" "}
-                  <span className="text-sm text-gray-400">– Al Ahramat School, Laâyoune (2020)</span>
+                  <span className="text-sm" style={{ color: '#064E3B', opacity: 0.7 }}>– Al Ahramat School, Laâyoune (2020)</span>
                 </li>
               </ul>
             </div>
 
             {/* 💼 Work Experience */}
-            <div className="glass p-6 rounded-2xl border border-white/10 card-hover group">
-              <div className="gradient-border p-4 rounded-xl mb-4">
-                <h3 className="text-xl font-bold mb-2 gradient-text">💼 Work Experience</h3>
+            <div className="p-6 rounded-2xl border border-emerald-200 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="p-4 rounded-xl mb-4 border-2 border-emerald-400 bg-emerald-50">
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#064E3B' }}>💼 Work Experience</h3>
               </div>
-              <div className="space-y-6 text-gray-300">
-                <div className="group-hover:text-gray-200 transition-colors">
-                  <h4 className="font-semibold text-blue-400 mb-2">
+              <div className="space-y-6" style={{ color: '#064E3B' }}>
+                <div className="group-hover:opacity-80 transition-opacity">
+                  <h4 className="font-semibold mb-2" style={{ color: '#10B981' }}>
                     Full Stack Developer Intern – ALEF DIGITAL SOLUTIONS (2024)
                   </h4>
                   <p className="text-sm leading-relaxed">
@@ -118,8 +129,8 @@ export const About = () => {
                   </p>
                 </div>
 
-                <div className="group-hover:text-gray-200 transition-colors">
-                  <h4 className="font-semibold text-cyan-400 mb-2">
+                <div className="group-hover:opacity-80 transition-opacity">
+                  <h4 className="font-semibold mb-2" style={{ color: '#F59E0B' }}>
                     Full Stack Developer – Final Year Project (BricoHub, 2024)
                   </h4>
                   <p className="text-sm leading-relaxed">
@@ -132,8 +143,8 @@ export const About = () => {
           </div>
 
           {/* Floating decorative elements */}
-          <div className="absolute top-20 right-10 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl animate-float"></div>
-          <div className="absolute bottom-20 left-10 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-20 right-10 w-32 h-32 rounded-full blur-2xl animate-float" style={{ backgroundColor: 'rgba(16, 185, 129, 0.1)' }}></div>
+          <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full blur-2xl animate-float" style={{ backgroundColor: 'rgba(245, 158, 11, 0.1)', animationDelay: '2s' }}></div>
         </div>
       </RevealOnScroll>
     </section>
